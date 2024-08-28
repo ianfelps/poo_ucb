@@ -18,21 +18,16 @@ public class SepararNumeros{ // criar classe
         System.out.println("Entre com um numero de 5 digitos: ");
         num = input.nextInt();
 
-       if (num < 100000){ // verificar se o numero possui mais de 5 digitos
-            if(num > 9999){ // verificar se o numero possui menos de 5 digitos
-                System.out.println("--- Resultado ---");
-                System.out.printf("%d   ", aux = num / 10000);
-                System.out.printf("%d   ", aux = (num / 1000) % 10);
-                System.out.printf("%d   ", aux = ((num / 100) % 100) % 10);
-                System.out.printf("%d   ", aux = (((num / 10) % 1000) % 100) % 10);
-                System.out.printf("%d   ", aux = (((num % 100000) % 1000) % 100) % 10);
-            } else{
-                System.out.println("--- Resultado Negado ---");
-                System.out.println("O numero inserido possui menos de 5 digitos.");
-            }
+       if (num < 100000 && num > 9999){ // verificar se o numero possui 5 digitos
+            System.out.println("--- Resultado ---");
+            System.out.printf("%d   ", aux = num / 10000);
+            System.out.printf("%d   ", aux = (num / 1000) % 10);
+            System.out.printf("%d   ", aux = ((num / 100) % 100) % 10);
+            System.out.printf("%d   ", aux = (((num / 10) % 1000) % 100) % 10);
+            System.out.printf("%d   ", aux = (((num % 100000) % 1000) % 100) % 10);
         } else{
             System.out.println("--- Resultado Negado ---");
-            System.out.println("O numero inserido possui mais de 5 digitos.");
+            System.out.println("O numero inserido nao possui 5 digitos.");
         }
 
         /*
