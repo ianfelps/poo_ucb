@@ -23,7 +23,7 @@ public class TesteBanco{ // criar classe para execucao
         ContaBanco ContaBancaria = new ContaBanco(nome); // declarar e instanciar a conta do banco
 
         while(sair != 1){
-            System.out.printf("\nOlá %s, qual operacao deseja realizar? \n", nome);
+            System.out.printf("\nOla %s, qual operacao deseja realizar? \n", nome);
             System.out.println("1 - Depositar;");
             System.out.println("2 - Consultar Saldo;");
             System.out.println("3 - Sair.");

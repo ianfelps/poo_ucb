@@ -21,26 +21,26 @@ public class TesteBanco2{ // criar classe para execucao
         ContaBanco2 ContaBancaria = new ContaBanco2(nome); // declarar e instanciar a conta do banco
 
         while(sair != 1){
-            opcao_menu = Integer.parseInt(JOptionPane.showInputDialog(null,"Olá "+ nome + ", qual operação deseja realizar?\n1 - Depositar;\n2 - Consultar Saldo;\n3- Sair."));
+            opcao_menu = Integer.parseInt(JOptionPane.showInputDialog(null,"Ola "+ nome + ", qual operacao deseja realizar?\n1 - Depositar;\n2 - Consultar Saldo;\n3- Sair."));
 
             switch(opcao_menu){
                 case 1:
                     deposito = Double.parseDouble(JOptionPane.showInputDialog(null, "--- Depositar ---\nInsira o valor que deseja depositar:"));
                     ContaBancaria.depositar(deposito);
-                    JOptionPane.showMessageDialog(null, "Depósito realizado com sucesso!");
+                    JOptionPane.showMessageDialog(null, "Deposito realizado com sucesso!");
                     break;
 
                 case 2:
-                    JOptionPane.showMessageDialog(null, "--- Consultar Saldo ---\nO seu saldo atual é de: R$ " + ContaBancaria.consultarSaldo());
+                    JOptionPane.showMessageDialog(null, "--- Consultar Saldo ---\nO seu saldo atual eh de: R$ " + ContaBancaria.consultarSaldo());
                     break;
 
                 case 3:
-                    JOptionPane.showMessageDialog(null, "--- Até logo! ---");
+                    JOptionPane.showMessageDialog(null, "--- Ate logo! ---");
                     sair++;
                     break;
 
                 default:
-                    JOptionPane.showMessageDialog(null, "Opção Inválida!");
+                    JOptionPane.showMessageDialog(null, "Opcao Invalida!");
                     break;
             }
         }
