@@ -10,23 +10,26 @@ public class TesteBanco{ // criar classe para execucao
 
         Scanner input = new Scanner(System.in); // declarar e instanciar Scanner
 
-        String nome;
-        double deposito;
-        int opcao_menu;
-        int sair = 0;
+        double deposito, saque;
+        int opcao_menu = 0;
 
         System.out.println("--- Conta Bancaria ---");
 
-        System.out.println("Qual o seu nome? ");
-        nome = input.nextLine();
+        System.out.println("Insira o seu nome: ");
+        String nome = input.nextLine();
+        System.out.println("Insira o numero da conta: ");
+        int numero = input.nextInt();
 
-        ContaBanco ContaBancaria = new ContaBanco(nome); // declarar e instanciar a conta do banco
+        ContaBanco ContaBancaria = new ContaBanco(nome, numero, 500); // declarar e instanciar a conta do banco
 
-        while(sair != 1){
-            System.out.printf("\nOla %s, qual operacao deseja realizar? \n", nome);
+        while(opcao_menu != 5){
+            System.out.println();
+            System.out.println("Ola " + ContaBancaria.getNome() + ", qual operacao deseja realizar?");
             System.out.println("1 - Depositar;");
-            System.out.println("2 - Consultar Saldo;");
-            System.out.println("3 - Sair.");
+            System.out.println("2 - Sacar;");
+            System.out.println("3 - Consultar Saldo;");
+            System.out.println("4 - Consultar Dados;");
+            System.out.println("5 - Sair.");
             opcao_menu = input.nextInt();
 
             switch(opcao_menu){
@@ -39,13 +42,26 @@ public class TesteBanco{ // criar classe para execucao
                     break;
 
                 case 2:
+                    System.out.println("--- Sacar ---");
+                    System.out.println("Insira o valor que deseja sacar: ");
+                    saque = input.nextDouble();
+                    ContaBancaria.sacar(saque);
+                    break;
+
+                case 3:
                     System.out.println("--- Consultar Saldo ---");
                     System.out.printf("O seu saldo atual eh de: R$ %.2f\n", ContaBancaria.consultarSaldo());
                     break;
 
-                case 3:
+                case 4:
+                    System.out.println("--- Consultar Dados ---");
+                    System.out.println("Nome: " + ContaBancaria.getNome());
+                    System.out.println("Num. Conta: " + ContaBancaria.getNumero());
+                    System.out.println("Limite: R$ " + ContaBancaria.getLimite());
+                    break;
+
+                case 5:
                     System.out.println("--- Ate logo! ---");
-                    sair++;
                     break;
 
                 default:
