@@ -10,8 +10,10 @@ public class Serie{
 
         System.out.println("--- Calcular Serie Taylor ---");
         // coletar e armazenar numero
-        System.out.println("Insira o valor de x (em radianos): ");
-        double valor_x = input.nextDouble();
+        System.out.println("Insira o valor de x (em graus): ");
+        int graus = input.nextInt();
+
+        double valor_x = graus * 3.14 / 180; // converter graus para radianos
 
         System.out.println("Insira o numero de termos para calcular: ");
         int numero = input.nextInt();
@@ -28,7 +30,7 @@ public class Serie{
 
         // imprimir resultado
         System.out.println("--- Resultado ---");
-        System.out.printf("A serie Taylor para cos(%.2f) com %d termos eh aproximadamente %.4f!", valor_x, numero, resultado);
+        System.out.printf("A serie Taylor para cos(%d) com %d termos eh aproximadamente %.4f!", graus, numero, resultado);
     }
 
     public static double calcularFatorial(int num){ // metodo para calcular fatorial
