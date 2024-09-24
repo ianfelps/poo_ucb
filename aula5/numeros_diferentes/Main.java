@@ -5,6 +5,8 @@ public class Main{
         Scanner scanner = new Scanner(System.in);
         int[] numeros = new int[5];
         
+        System.out.println("--- Valores Unicos ---");
+
         // inserir os cinco números
         System.out.println("Insira 5 numeros entre 10 e 100:");
         for (int i = 0; i < 5; i++) {

@@ -1,13 +1,16 @@
 import java.util.Scanner;
 
 public class Main{
-    private static char[][] tabuleiro = new char[3][3]; // tabuleiro
-    private static char jogadorAtual = 'X'; // jogador atual
-    private static JogoDaVelha jogo = new JogoDaVelha(); // classe do jogo da velha
-
     public static void main(String[] args) {
+
+        char[][] tabuleiro = new char[3][3]; // tabuleiro
+        char jogadorAtual = 'X'; // jogador atual
+        JogoDaVelha jogo = new JogoDaVelha(); // classe do jogo da velha
+
         jogo.inicializarTabuleiro(tabuleiro);
         Scanner scanner = new Scanner(System.in);
+
+        System.out.println("-- Jogo da Velha ---");
 
         // a cada rodada
         while (true) {

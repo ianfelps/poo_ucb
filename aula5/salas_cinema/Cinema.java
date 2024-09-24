@@ -6,6 +6,8 @@ public class Cinema{
         int[] lugares_vagos = {10, 2, 1, 3, 0}; // salas 1 a 5
         int sala, quantidade;
 
+        System.out.println("--- Salas de Cinema ---");
+
         // a cada insercao do usuario
         while (true) {
             System.out.print("Digite o numero da sala (1 a 5, ou 0 para sair): ");

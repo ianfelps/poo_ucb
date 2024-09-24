@@ -6,6 +6,8 @@ public class Main{
         Scanner scanner = new Scanner(System.in);
         Parenteses validador = new Parenteses();  // instancia a classe Parenteses
 
+        System.out.println("--- Verificar Parenteses ---");
+
         System.out.println("Digite uma expressão com parênteses: ");
         String expressao = scanner.nextLine();
 
