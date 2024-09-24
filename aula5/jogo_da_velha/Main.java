@@ -13,9 +13,9 @@ public class Main{
         while (true) {
             // printar o tabuleiro
             jogo.imprimirTabuleiro(tabuleiro);
-            System.out.println("Jogador " + jogadorAtual + ", escolha sua linha (0, 1, 2) e coluna (0, 1, 2):");
-            int linha = scanner.nextInt();
-            int coluna = scanner.nextInt();
+            System.out.println("Jogador " + jogadorAtual + ", escolha sua linha (1, 2, 3) e coluna (1, 2, 3):");
+            int linha = scanner.nextInt() - 1;
+            int coluna = scanner.nextInt() - 1;
 
             // verificar se a posicao que o usuario inseriu eh valida e esta vazia
             if (linha < 0 || linha > 2 || coluna < 0 || coluna > 2 || tabuleiro[linha][coluna] != ' ') {
