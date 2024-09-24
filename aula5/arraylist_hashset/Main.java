@@ -10,6 +10,8 @@ public class Main{
         ArrayList<Integer> arrayList = new ArrayList<>();
         long inicioArrayListInsercao = System.currentTimeMillis();
 
+        System.out.println("--- ArrayList x HashSet ---");
+
         // inserir na ArrayList
         Operacoes.inserirArrayList(arrayList, TOTAL_ELEMENTOS);
         long fimArrayListInsercao = System.currentTimeMillis();

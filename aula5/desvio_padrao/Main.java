@@ -15,6 +15,8 @@ public class Main{
             numeros[i] = scanner.nextDouble();
         }
 
+        System.out.println("--- Resultado ---");
+
         // obter a media e o desvio padrão
         double media = Calculos.calcularMedia(numeros);
         System.out.printf("A media eh: %.2f\n", media);
