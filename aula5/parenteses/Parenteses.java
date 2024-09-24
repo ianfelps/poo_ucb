@@ -10,7 +10,7 @@ public class Parenteses{
             char caractere = expressao.charAt(i);
 
             if (caractere == '(') {
-                pilha.push(caractere);  // Adiciona a pilha quando encontra um abre parenteses
+                pilha.push(caractere);  // adiciona a pilha quando encontra um abre parenteses
             } else if (caractere == ')') {
                 if (pilha.isEmpty()) {
                     return false;  // fecha parenteses sem um correspondente aberto

@@ -9,6 +9,7 @@ public class Main{
         System.out.println("Digite uma expressão com parênteses: ");
         String expressao = scanner.nextLine();
 
+        // utiliza o funcao de verificacao
         if (validador.verificaExpressao(expressao)) {
             System.out.println("OK");
         } else {
