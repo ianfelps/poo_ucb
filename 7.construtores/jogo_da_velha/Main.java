@@ -10,7 +10,7 @@ public class Main{
 
         while (!finalJogo) {
             jogo.mostrarTabuleiro();
-            System.out.println("Jogador " + (jogo.getJogadorAtual() == TicTacToe.Posicao.X ? "X" : "O") + ", faca sua jogada!");
+            System.out.println("Jogador " + (jogo.getJogadorAtual() == TicTacToe.Celula.X ? "X" : "O") + ", faca sua jogada!");
             System.out.print("Digite a linha (1, 2 ou 3): ");
             int linha = input.nextInt();
             System.out.print("Digite a coluna (1, 2 ou 3): ");

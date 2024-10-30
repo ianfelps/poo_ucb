@@ -1,22 +1,22 @@
 public class TicTacToe {
-    public enum Posicao { X, O, EMPTY }
-    private Posicao[][] tabuleiro;
-    private Posicao jogadorAtual;
+    public enum Celula { X, O, EMPTY }
+    private Celula[][] tabuleiro;
+    private Celula jogadorAtual;
 
     // construtor para inicializar o tabuleiro vazio e o jogador inicial
     public TicTacToe() {
-        tabuleiro = new Posicao[3][3];
+        tabuleiro = new Celula[3][3];
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                tabuleiro[i][j] = Posicao.EMPTY;
+                tabuleiro[i][j] = Celula.EMPTY;
             }
         }
-        jogadorAtual = Posicao.X;
+        jogadorAtual = Celula.X;
     }
 
     // realizar uma jogada
     public boolean fazerJogada(int linha, int coluna) {
-        if (linha < 0 || linha >= 3 || coluna < 0 || coluna >= 3 || tabuleiro[linha][coluna] != Posicao.EMPTY) {
+        if (linha < 0 || linha >= 3 || coluna < 0 || coluna >= 3 || tabuleiro[linha][coluna] != Celula.EMPTY) {
             System.out.println("Movimento invalido. Tente novamente.");
             return false;
         }
@@ -31,7 +31,7 @@ public class TicTacToe {
         }
 
         // alternar entre os jogadores
-        jogadorAtual = (jogadorAtual == Posicao.X) ? Posicao.O : Posicao.X;
+        jogadorAtual = (jogadorAtual == Celula.X) ? Celula.O : Celula.X;
         return false;
     }
 
@@ -59,7 +59,7 @@ public class TicTacToe {
     private boolean verificarEmpate() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                if (tabuleiro[i][j] == Posicao.EMPTY) {
+                if (tabuleiro[i][j] == Celula.EMPTY) {
                     return false;
                 }
             }
@@ -84,7 +84,7 @@ public class TicTacToe {
     }
 
     // getter do jogador atual
-    public Posicao getJogadorAtual() {
+    public Celula getJogadorAtual() {
         return jogadorAtual;
     }
 }
