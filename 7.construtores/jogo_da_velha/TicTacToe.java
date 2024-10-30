@@ -17,7 +17,7 @@ public class TicTacToe {
     // realizar uma jogada
     public boolean fazerJogada(int linha, int coluna) {
         if (linha < 0 || linha >= 3 || coluna < 0 || coluna >= 3 || tabuleiro[linha][coluna] != Celula.EMPTY) {
-            System.out.println("Movimento invalido. Tente novamente.");
+            System.out.println("Movimento invalido. Tente novamente."); 
             return false;
         }
 
@@ -74,7 +74,7 @@ public class TicTacToe {
                 switch (tabuleiro[i][j]) {
                     case X -> System.out.print(" X ");
                     case O -> System.out.print(" O ");
-                    case EMPTY -> System.out.print(" . ");
+                    case EMPTY -> System.out.print("   ");
                 }
                 if (j < 2) System.out.print("|");
             }
