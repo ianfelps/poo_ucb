@@ -7,5 +7,6 @@
 ### 5 - Array e Arraylist
 ### 6 - Tratamento de Exceções
 ### 7 - Construtores, Enum e Static
+### 8 - Herança e Polimorfismo
 
 Repositório para atividades e projetos da disciplina de Programação Orientada a Objetos na UCB (4º Semestre).
