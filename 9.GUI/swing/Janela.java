@@ -13,6 +13,10 @@ import javax.swing.JComboBox;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 
 public class Janela extends JFrame {
 
@@ -87,5 +91,36 @@ public class Janela extends JFrame {
         add(studRadioButton);
         add(checkBox);
         add(comboBox);
+
+        // eventos dos butoes
+        ComponentsHandler handler = new ComponentsHandler();
+        loginButton.addActionListener(handler);
+        registerButton.addActionListener(handler);
+        profRadioButton.addItemListener(handler);
+        studRadioButton.addItemListener(handler);
+        checkBox.addItemListener(handler);
+    }
+
+    // classe para tratar os eventos dos butoes
+    private class ComponentsHandler implements ActionListener, ItemListener {
+        
+        // metodo da interface ActionListener
+        @Override
+        public void actionPerformed(ActionEvent event){
+            if (event.getSource() == loginButton){
+                String texto;
+                texto = String.format("Usuario: %s \nSenha: %s \n%s \nLembrar: %s \nCurso: %s", userField.getText(), passwordField.getText(), (profRadioButton.isSelected()) ? "Professor" : "Aluno", (checkBox.isSelected()) ? "Sim" : "Nao", (String)comboBox.getSelectedItem());
+                System.out.printf(texto);
+            }
+        }
+
+        // metodo da interface ItemListener
+        @Override
+        public void itemStateChanged(ItemEvent event){
+            if (studRadioButton.isSelected())
+                System.out.println("Evento de item (Aluno)!");
+            if (profRadioButton.isSelected())
+                System.out.println("Evento de item (Professor)!");
+        }
     }
 }
